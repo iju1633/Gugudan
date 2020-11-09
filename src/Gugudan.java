@@ -7,14 +7,22 @@ public class Gugudan {
 		System.out.println("내가 출력할 구구단은?"); // 6단과 7단인걸 알지만;
 		Scanner scanner = new Scanner(System.in);
 		int num = scanner.nextInt();
-//		int i = 1;
-//		while(i<10) {
-//			System.out.println(num * i);
-//			i++;
-//		}
-		for(int i = 1; i<10; i++) {
-			System.out.println(num * i);
-		} 
+		System.out.println("out number is : " + num);
+			if(num>9) {
+				System.out.println("error is caused because of big number");
+				}
+			else if (num<1) {
+				System.out.println("error is caused because of small number");
+				}
+			else {
+				for(int i = 1; i<10; i++) {
+					System.out.println(num * i);}
+				}
+				
+		
 		
 	}
-}
+
+		
+	}
+
