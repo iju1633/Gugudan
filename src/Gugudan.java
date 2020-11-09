@@ -14,7 +14,7 @@ public class Gugudan {
 //		}
 		for(int i = 1; i<10; i++) {
 			System.out.println(num * i);
-		}
+		} 
 		
 	}
 }
