@@ -1,28 +1,21 @@
-import java.util.Scanner;
 
-//사용자로부터 숫자를 받아서(6단,7단) 해당 구구단을 출력시키는 클래스
+//이중 for문을 이용한 구구단 출력
 public class Gugudan {
+
+
 	public static void main(String[] args) {
-
-		System.out.println("내가 출력할 구구단은?"); // 6단과 7단인걸 알지만;
-		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt();
-		System.out.println("out number is : " + num);
-			if(num>9) {
-				System.out.println("error is caused because of big number");
-				}
-			else if (num<1) {
-				System.out.println("error is caused because of small number");
-				}
-			else {
-				for(int i = 1; i<10; i++) {
-					System.out.println(num * i);}
-				}
-				
 		
+		int[] result = new int[9]; //크기가 9인 배열함수 설정
 		
+		for(int j = 1; j<10; j++)
+		{
+			System.out.println(j+"단입니다");
+		for(int i = 0; i<9; i++)
+		{
+			result[i] = j * (i+1);
+			System.out.println(result[i]);
+		}
+		
+		}
 	}
-
-		
-	}
-
+}
