@@ -1,33 +1,26 @@
-import java.util.Scanner; // Scanner 대문자
+//최종 요구사항 1
+//사용자가 입력한 값에 따라 크기가 다른 구구단을 계산해 출력한다.
+//예를 들어 사용자가 8을 입력하면 팔팔단, 19를 입력하면 십구십구단(2 * 1에서 19 * 19)을 계산해 출력한다.
+//이 요구사항은 앞의 실습을 소화했으면 구현할 수 있기 때문에 생략한다.
 
-//method 함수를 설정하여 좀더 이해가 쉽게 코드 짜기
+import java.util.Scanner;
+
 public class Gugudan {
-	public static int[] calculate(int times) { //배열함수 설정.
-		int[] result = new int[9]; // new 까먹지마
-		
-		for(int i=0; i<result.length; i++) {
-			result[i] = (1+i) * times; // times를 왜 설정해놓고 안써
-		}
-		
-		return result;
-	}
-	public static void print(int[] result) {
-		for(int i=0; i<result.length;i++) {
-			System.out.println(result[i]);// 그냥 result라고 하니까 [I@8efb846와 같은 결과 나옴.
-		}
-	}
-	
 	
 	public static void main(String[] args) {
-		System.out.println("What is your number?");
+		
+		System.out.println("what is your number for Gugudan?");
 		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt(); // 기억 안났음
-		System.out.println("your adopted num : "+num);
+		int num = sc.nextInt();
+		System.out.println("Your chosen number : "+num);
 		
-			int result[] = calculate(num);
-			print(result);
-			
+		int[] result = new int[num];
 		
-
+		for(int i=0; i<result.length; i++) {
+			result[i] = (1+i) * num;
+			System.out.println(result[i]);
+		}
+		
+		
 	}
 }
